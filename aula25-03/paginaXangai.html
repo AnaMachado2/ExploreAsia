@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Xangai - ExploreMundo</title>
+
+<style>
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    background: #e9f1f7;
+}
+
+/* NAVBAR */
+.navbar {
+    background: #520c52;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* BANNER */
+.banner {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('xangai.png');
+    background-size: cover;
+    background-position: center;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+/* BOTÕES */
+.btn {
+    background: #f321bf;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 15px;
+    display: inline-block;
+}
+
+/* CONTAINER */
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* TÍTULOS */
+.secao-titulo {
+    color: #7d19c0;
+    border-bottom: 1px solid #ccc;
+    margin-top: 30px;
+}
+
+/* CARDS */
+.cards {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: white;
+    border-radius: 8px;
+    flex: 1 1 250px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 15px;
+}
+
+/* IMAGENS */
+.img-destaque {
+    width: 100%;
+    border-radius: 8px;
+    margin-top: 15px;
+}
+
+/* FOOTER */
+.footer {
+    background: #320a42;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="navbar">
+    <strong>ExploreMundo</strong>
+    <div>Início | Destinos | Contato</div>
+</div>
+
+<div class="banner">
+    <h1>Xangai</h1>
+    <p>A Nova York da Ásia</p>
+</div>
+
+<div class="container">
+
+    <h3 class="secao-titulo">Sobre Xangai</h3>
+    <p>
+        Apelidada de “Nova York da Ásia”, Xangai é a cidade mais moderna e cosmopolita da China.
+        Com arranha-céus futuristas, luzes de néon e intensa vida urbana, a cidade mistura tradição e inovação.
+        Dividida pelo rio Huangpu, temos:
+        <strong>Bund</strong> (lado histórico e cultural) e <strong>Pudong</strong> (centro financeiro moderno).
+    </p>
+
+    <img src="CHINA.png" class="img-destaque" alt="Bund Xangai">
+
+    <h3 class="secao-titulo">💰 Custos de Viagem</h3>
+
+    <div class="cards">
+        <div class="card">
+            <h4>✈️ Passagens</h4>
+            <p>Média ida e volta:</p>
+            <strong>R$ 9.000</strong>
+        </div>
+
+        <div class="card">
+            <h4>🏨 Hospedagem</h4>
+            <p>Econômico: R$ 250</p>
+            <p>Intermediário: R$ 500 – 650</p>
+            <p>Luxo: a partir de R$ 2.800</p>
+        </div>
+
+        <div class="card">
+            <h4>📍 Melhores Áreas</h4>
+            <p>• People's Square</p>
+            <p>• The Bund</p>
+            <p>• Jing'an</p>
+        </div>
+    </div>
+
+    <h3 class="secao-titulo">🍜 Restaurantes</h3>
+
+    <div class="cards">
+        <div class="card">
+            <h4>Tradicionais</h4>
+            <p>Jia Jia Tang Bao</p>
+            <p>Shanghai Grandmother</p>
+            <p>Yang’s Dumplings</p>
+        </div>
+
+        <div class="card">
+            <h4>Alta Gastronomia</h4>
+            <p>Hakkasan</p>
+            <p>Mr & Mrs Bund</p>
+            <p>Mercato</p>
+        </div>
+
+        <div class="card">
+            <h4>Recomendações</h4>
+            <p>🍴 Rua: Huanghe Road</p>
+            <p>❤️ Romântico: The Bund</p>
+            <p>🌱 Vegetariano: Chunfeng</p>
+        </div>
+    </div>
+
+    <h3 class="secao-titulo">📸 Galeria</h3>
+    <div class="cards">
+        <div class="card">
+            <img src="hotelxangai.png" class="img-destaque">
+        </div>
+        <div class="card">
+            <img src="restaurante.png" class="img-destaque">
+        </div>
+        <div class="card">
+            <img src="lazerxangai.png" class="img-destaque">
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
