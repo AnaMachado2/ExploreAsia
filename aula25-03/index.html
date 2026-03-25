@@ -1,164 +1,194 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ExploreAsia - Viagens</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ExploreMundo</title>
 
-    <style>
-        body {
-            font-family: 'Segoe UI', sans-serif;
-            margin: 0;
-            background: #e9f1f7;
-        }
+<style>
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    background: #f4f4f4;
+}
 
-        /* NAVBAR */
-        .navbar {
-            background: #520c52;
-            color: white;
-            padding: 15px;
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-        }
+/* NAVBAR */
+.navbar {
+    background: linear-gradient(to right, #1c6ea4, #2f8fc9);
+    color: white;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-        .nav-links {
-            display: flex;
-            gap: 15px;
-        }
+.nav-links span {
+    margin-left: 20px;
+    cursor: pointer;
+}
 
-        /* BANNER */
-        .banner {
-            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('bankok.png');
-            background-size: cover;
-            background-position: center;
-            height: 350px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
+/* BANNER */
+.banner {
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('bankok.png');
+    background-size: cover;
+    background-position: center;
+    height: 420px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
 
-        /* BOTÕES */
-        .btn {
-            background: #f321bf;
-            color: white;
-            padding: 10px 25px; /* Aumentei um pouco o preenchimento lateral */
-            border-radius: 5px;
-            text-decoration: none;
-            border: none;
-            cursor: pointer;
-            margin-top: 15px;
-            margin-bottom: 25px; /* Espaçamento extra abaixo do botão */
-            display: inline-block; /* Garante que as margens funcionem corretamente */
-            transition: 0.3s;
-        }
+.banner h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
 
-        .btn:hover {
-            opacity: 0.8;
-            transform: translateY(-2px); /* Efeito visual simples ao passar o mouse */
-        }
+.banner p {
+    font-size: 18px;
+}
 
-        /* CONTAINER */
-        .container {
-            max-width: 1000px;
-            margin: auto;
-            padding: 20px;
-        }
+/* BOTÕES */
+.btn {
+    background: #ff7a00;
+    color: white;
+    padding: 12px 28px;
+    border-radius: 6px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    margin-top: 15px;
+    display: inline-block;
+    transition: 0.3s;
+}
 
-        /* TÍTULOS */
-        .secao-titulo {
-            color: #7d19c0;
-            border-bottom: 1px solid #ccc;
-            padding-bottom: 5px;
-            margin-top: 40px; /* Espaço antes de começar uma nova seção */
-        }
+.btn:hover {
+    opacity: 0.85;
+}
 
-        /* CARDS */
-        .cards {
-            display: flex;
-            gap: 15px;
-            flex-wrap: wrap;
-            margin-bottom: 20px;
-        }
+/* CONTAINER */
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 30px;
+}
 
-        .card {
-            background: white;
-            border-radius: 8px;
-            flex: 1 1 250px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            text-align: center;
-            overflow: hidden;
-        }
+/* TÍTULOS */
+.secao-titulo {
+    text-align: center;
+    color: #2f4f6f;
+    margin: 40px 0 20px;
+    position: relative;
+}
 
-        .card img {
-            width: 100%;
-            height: 150px;
-            object-fit: cover;
-        }
+.secao-titulo::before,
+.secao-titulo::after {
+    content: "";
+    height: 1px;
+    width: 35%;
+    background: #ccc;
+    position: absolute;
+    top: 50%;
+}
 
-        /* CONTATO */
-        .contato {
-            background: #d1e3f0;
-            padding: 30px;
-            border-radius: 8px;
-            display: flex;
-            gap: 30px;
-            flex-wrap: wrap;
-            margin-top: 20px;
-        }
+.secao-titulo::before {
+    left: 0;
+}
 
-        .contato div {
-            flex: 1;
-            min-width: 280px;
-        }
+.secao-titulo::after {
+    right: 0;
+}
 
-        input {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            box-sizing: border-box; /* Garante que o padding não estoure a largura */
-        }
+/* CARDS */
+.cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
 
-        textarea {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            box-sizing: border-box;
-            
-            /* ESSENCIAL: Impede o usuário de redimensionar a caixa */
-            resize: none; 
-        }
+.card {
+    background: white;
+    border-radius: 10px;
+    flex: 1 1 300px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: center;
+    overflow: hidden;
+}
 
-        /* FOOTER */
-        .footer {
-            background: #320a42;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            margin-top: 40px;
-        }
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
 
-        /* RESPONSIVO */
-        @media(max-width: 600px){
-            .banner h1 {
-                font-size: 24px;
-            }
-        }
-    </style>
+.card h4 {
+    margin: 10px 0 5px;
+}
+
+.card p {
+    color: #666;
+    margin-bottom: 15px;
+}
+
+/* SOBRE */
+.sobre {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* CONTATO */
+.contato {
+    background: #dbeaf3;
+    padding: 30px;
+    border-radius: 8px;
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.contato div {
+    flex: 1;
+    min-width: 280px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: none;
+}
+
+/* FOOTER */
+.footer {
+    background: #2f6d9c;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+}
+
+/* RESPONSIVO */
+@media(max-width: 768px) {
+    .banner h1 {
+        font-size: 28px;
+    }
+}
+</style>
 </head>
 
 <body>
 
+<!-- NAVBAR -->
 <div class="navbar">
-    <strong>ExploreMundo</strong>
+    <strong>🌍 ExploreMundo</strong>
     <div class="nav-links">
         <span>Início</span>
         <span>Destinos</span>
@@ -167,6 +197,7 @@
     </div>
 </div>
 
+<!-- BANNER -->
 <div class="banner">
     <h1>Descubra Lugares Incríveis!</h1>
     <p>Explore os melhores destinos ao redor do mundo.</p>
@@ -175,54 +206,63 @@
 
 <div class="container">
 
+    <!-- DESTINOS -->
     <h3 class="secao-titulo">Destinos Populares</h3>
 
     <div class="cards">
         <div class="card">
-            <img src="montefuji.png" alt="Japão">
-            <h4>Japão</h4>
-            <p>Meditação nos templos</p>
-        </div>
-
-        <div class="card">
-            <img src="seoul.png" alt="Coreia do Sul">
+            <img src="seoul.png">
             <h4>Coreia do Sul</h4>
-            <p>Conheça Seoul</p>
+            <p>Conheça a Capital</p>
         </div>
 
         <div class="card">
-            <img src="xangai.png" alt="Xangai">
-            <h4>Xangai</h4>
+            <img src="montefuji.png">
+            <h4>Japão</h4>
+            <p>Meditação em Tokyo</p>
+        </div>
+
+        <div class="card">
+            <img src="xangai.png">
+            <h4>China</h4>
             <p>Explore a cultura e história</p>
         </div>
     </div>
 
     <center><a href="#" class="btn">Ver Mais Destinos</a></center>
 
+    <!-- SOBRE -->
     <h3 class="secao-titulo">Sobre Nós</h3>
-    <p>Somos apaixonados por viagens e queremos ajudar você a explorar o mundo!</p>
+    <div class="sobre">
+        <p>Somos apaixonados por viagens e queremos ajudar você a explorar o mundo!</p>
+        <a href="#" class="btn">Leia Mais</a>
+    </div>
 
-    <a href="#" class="btn">Leia Mais</a>
-
+    <!-- CONTATO -->
     <div class="contato">
         <div>
             <h4>Fale Conosco</h4>
             <input type="text" placeholder="Nome">
             <input type="email" placeholder="E-mail">
-            <textarea rows="5" placeholder="Sua mensagem aqui..."></textarea>
-            <button class="btn" style="background:#1a4a72; margin-bottom: 0;">Enviar</button>
+            <textarea rows="5" placeholder="Mensagem"></textarea>
+            <button class="btn" style="background:#1f5d8c;">Enviar</button>
         </div>
 
         <div>
             <h4>Onde Estamos</h4>
-            <img src="mapa.png" style="width:100%; border-radius:8px; background: #ccc;" alt="Mapa">
+            <img src="mapa.png" style="width:100%; border-radius:8px;">
             <p>
-                📧 contato@exploremundo.com<br>
+                📧 email: contato@exploremundo.com<br>
                 📞 (11) 1234-5678
             </p>
         </div>
     </div>
 
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+    © 2024 ExploreMundo - Todos os direitos reservados
 </div>
 
 </body>
