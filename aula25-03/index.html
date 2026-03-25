@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ExploreAsia - Viagens</title>
+
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            background: #e9f1f7;
+        }
+
+        /* NAVBAR */
+        .navbar {
+            background: #520c52;
+            color: white;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        /* BANNER */
+        .banner {
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('bankok.png');
+            background-size: cover;
+            background-position: center;
+            height: 350px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* BOTÕES */
+        .btn {
+            background: #f321bf;
+            color: white;
+            padding: 10px 25px; /* Aumentei um pouco o preenchimento lateral */
+            border-radius: 5px;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            margin-top: 15px;
+            margin-bottom: 25px; /* Espaçamento extra abaixo do botão */
+            display: inline-block; /* Garante que as margens funcionem corretamente */
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            opacity: 0.8;
+            transform: translateY(-2px); /* Efeito visual simples ao passar o mouse */
+        }
+
+        /* CONTAINER */
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        /* TÍTULOS */
+        .secao-titulo {
+            color: #7d19c0;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 5px;
+            margin-top: 40px; /* Espaço antes de começar uma nova seção */
+        }
+
+        /* CARDS */
+        .cards {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 8px;
+            flex: 1 1 250px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        /* CONTATO */
+        .contato {
+            background: #d1e3f0;
+            padding: 30px;
+            border-radius: 8px;
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .contato div {
+            flex: 1;
+            min-width: 280px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box; /* Garante que o padding não estoure a largura */
+        }
+
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            
+            /* ESSENCIAL: Impede o usuário de redimensionar a caixa */
+            resize: none; 
+        }
+
+        /* FOOTER */
+        .footer {
+            background: #320a42;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        /* RESPONSIVO */
+        @media(max-width: 600px){
+            .banner h1 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="navbar">
+    <strong>ExploreMundo</strong>
+    <div class="nav-links">
+        <span>Início</span>
+        <span>Destinos</span>
+        <span>Sobre</span>
+        <span>Contato</span>
+    </div>
+</div>
+
+<div class="banner">
+    <h1>Descubra Lugares Incríveis!</h1>
+    <p>Explore os melhores destinos ao redor do mundo.</p>
+    <a href="#" class="btn">Saiba Mais</a>
+</div>
+
+<div class="container">
+
+    <h3 class="secao-titulo">Destinos Populares</h3>
+
+    <div class="cards">
+        <div class="card">
+            <img src="montefuji.png" alt="Japão">
+            <h4>Japão</h4>
+            <p>Meditação nos templos</p>
+        </div>
+
+        <div class="card">
+            <img src="seoul.png" alt="Coreia do Sul">
+            <h4>Coreia do Sul</h4>
+            <p>Conheça Seoul</p>
+        </div>
+
+        <div class="card">
+            <img src="xangai.png" alt="Xangai">
+            <h4>Xangai</h4>
+            <p>Explore a cultura e história</p>
+        </div>
+    </div>
+
+    <center><a href="#" class="btn">Ver Mais Destinos</a></center>
+
+    <h3 class="secao-titulo">Sobre Nós</h3>
+    <p>Somos apaixonados por viagens e queremos ajudar você a explorar o mundo!</p>
+
+    <a href="#" class="btn">Leia Mais</a>
+
+    <div class="contato">
+        <div>
+            <h4>Fale Conosco</h4>
+            <input type="text" placeholder="Nome">
+            <input type="email" placeholder="E-mail">
+            <textarea rows="5" placeholder="Sua mensagem aqui..."></textarea>
+            <button class="btn" style="background:#1a4a72; margin-bottom: 0;">Enviar</button>
+        </div>
+
+        <div>
+            <h4>Onde Estamos</h4>
+            <img src="mapa.png" style="width:100%; border-radius:8px; background: #ccc;" alt="Mapa">
+            <p>
+                📧 contato@exploremundo.com<br>
+                📞 (11) 1234-5678
+            </p>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
